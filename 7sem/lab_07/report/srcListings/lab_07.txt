@@ -1,0 +1,13 @@
+GENERATE (UNIFORM(1,1,5)),0,1000
+MoveTo QUEUE Queue_
+
+SEIZE Operator_
+DEPART Queue_
+
+ADVANCE (GAMMA(1,0,2,2))
+RELEASE Operator_
+
+TRANSFER 0.1,Finish,MoveTo
+Finish TERMINATE 1
+
+START 1000

@@ -1,0 +1,14 @@
+__pycache__/
+
+*.DS_Store
+*.vscode
+
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.gz
+*.toc
+
+_minted-report*

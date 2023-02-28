@@ -1,0 +1,41 @@
+              GPSS World Simulation Report - lab_06.2.1
+
+
+                   Friday, December 16, 2022 22:43:31  
+
+           START TIME           END TIME  BLOCKS  FACILITIES  STORAGES
+                0.000           5468.555     8        1          0
+
+
+              NAME                       VALUE  
+          FINISH                          8.000
+          MOVETO                          2.000
+          OPERATOR_                   10001.000
+          QUEUE_                      10000.000
+
+
+ LABEL              LOC  BLOCK TYPE     ENTRY COUNT CURRENT COUNT RETRY
+                    1    GENERATE          1500             0       0
+MOVETO              2    QUEUE             1623           499       0
+                    3    SEIZE             1124             1       0
+                    4    DEPART            1123             0       0
+                    5    ADVANCE           1123             0       0
+                    6    RELEASE           1123             0       0
+                    7    TRANSFER          1123             0       0
+FINISH              8    TERMINATE         1000             0       0
+
+
+FACILITY         ENTRIES  UTIL.   AVE. TIME AVAIL. OWNER PEND INTER RETRY DELAY
+ OPERATOR_         1124    0.817       3.976  1     1036    0    0     0    499
+
+
+QUEUE              MAX CONT. ENTRY ENTRY(0) AVE.CONT. AVE.TIME   AVE.(-0) RETRY
+ QUEUE_            502  500   1623      1   199.140    670.986    671.399   0
+
+
+CEC XN   PRI          M1      ASSEM  CURRENT  NEXT  PARAMETER    VALUE
+  1036    0        4089.879   1036      3      4
+
+
+FEC XN   PRI         BDT      ASSEM  CURRENT  NEXT  PARAMETER    VALUE
+  1501    0        5468.874   1501      0      1

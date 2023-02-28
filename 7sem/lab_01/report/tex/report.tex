@@ -1,0 +1,99 @@
+\documentclass{bmstu}
+
+\begin{document}
+
+\makereporttitle
+{Информатика и системы управления (ИУ)}
+{Программное обеспечение ЭВМ и информационные технологии (ИУ7)}
+{\textbf{1}}
+{Моделирование}
+{Функции распределения и плотности распределения}
+{4}
+{ИУ7-73Б}
+{К.Э. Ковалец}
+{И.В. Рудаков}
+
+
+\setcounter{page}{2}
+\renewcommand{\contentsname}{Содержание} 
+\tableofcontents
+
+\chapter{Задание}
+
+Необходимо разработать программу для построения графиков распределения и плотности распределения для:
+
+\begin{itemize}
+    \item равномерного распределения;
+    \item распределения Эрланга.
+\end{itemize}
+
+Также необходио разработать графический интерфейс для ввода параметров функций распределения.
+
+\chapter{Теоретическая часть}
+
+\section{Равномерное распределение}
+
+Функция равномерного распределения:
+
+\begin{equation}
+    F(x) =
+    \begin{cases}
+            0, x < a, \\
+            \begin{aligned}
+                \frac{x -  a}{b - a}, x \in [a, b], 
+            \end{aligned}\\
+            0, x > b. \\
+    \end{cases}
+\end{equation}
+
+Функция плотности равномерного распределения:
+
+\begin{equation}
+    f(x) =
+    \begin{cases}
+            \begin{aligned}
+                \frac{1}{b - a}, x \in [a, b], 
+            \end{aligned}\\
+            0, else. \\
+    \end{cases}
+\end{equation}
+
+\section{Распределение Эрланга}
+
+Функция распределения Эрланга:
+
+\begin{equation}
+    \begin{aligned}
+        F_k(x) = 1 - e^{-\lambda \cdot x} \cdot \sum_{i = 1}^{k - 1} \frac{(\lambda \cdot x)^i}{i!}.
+    \end{aligned}
+\end{equation}
+
+
+Функция плотности распределения Эрланга:
+
+\begin{equation}
+    \begin{aligned}
+        f_k(x) = \frac{\lambda \cdot (\lambda \cdot x)^{k - 1}}{(k - 1)!} \cdot e^{-\lambda \cdot x}.
+    \end{aligned}
+\end{equation}
+
+В данных формулах $\lambda$ и $k$ --- положительные параметры распределения $(\lambda \geqslant 0; k = 1, 2, ...)$;
+$x \geqslant 0$.
+
+\chapter{Результаты работы}
+
+\section{Листинги программы}
+
+В листинге \ref{lst:distribution} представлен класс $Distribution$, отвечающий за вычисление значений функций распределения и плотности распределения.
+
+\mylisting[python]{distribution.py}{firstline=1,lastline=23}{class Distribution}{distribution}{}
+
+\section{Демонстрация работы программы}
+
+На рисунках \ref{img:uniformDistr} - \ref{img:erlangDistr} представлены примеры работы программы.
+
+\imgs{uniformDistr}{h!}{0.33}{Равномерное распределение}
+
+\imgs{erlangDistr}{h!}{0.33}{Распределение Эрланга}
+
+\end{document}
